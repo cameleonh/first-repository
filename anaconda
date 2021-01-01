@@ -1,0 +1,94 @@
+
+
+-설치
+
+cd ~/다운로드 && wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh && bash Anaconda3-2020.02-Linux-x86_64.sh  && exit
+
+ 
+
+-가상환경 생성
+
+conda activate 가상환경이름
+
+ 
+###
+-가상환경 삭제
+
+conda env remove -n 가상환경이름
+
+ 
+
+- anaconda navigator 설치
+
+conda update anaconda-navigator
+
+ 
+
+- anaconda navigator 실행
+
+anaconda-navigator
+
+ 
+
+-버전확인
+
+conda --version
+
+ 
+
+-가상환경 확인
+
+conda info --envs
+
+ 
+
+-삭제
+
+conda install anaconda-clean
+anaconda-clean --yes
+###
+
+
+
+
+# tensorflow 버전확인
+
+pip list | grep tensorflow
+
+
+# Tensorflow 2.1 설치
+pip install --upgrade pip
+
+pip install msgpack
+
+conda install tensorflow-gpu==2.1
+ 
+
+# keras 설치
+
+conda install -c anaconda keras-gpu
+
+ 
+
+# pytorch 설치
+
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+
+ 
+
+# cuDNN 설치
+
+libcudnn7 7.6.5.32-1+cuda10.1 amd64.deb
+
+
+# PyQt5 설치
+pip install pyqt5==5.12
+
+# R 설치
+conda install -c r r-essentials
+
+# 파이참 설치
+sudo snap install pycharm-community --classic
+
+# 파이참 실행
+pycharm-community
