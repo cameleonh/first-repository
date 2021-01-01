@@ -18,3 +18,12 @@ cd Python-3.7.9
 ./configure
 make
 sudo make install
+
+# 설치된 python 버전 확인
+python3 -V
+
+# idle 설치
+sudo apt-get install idle-python3.7
+
+# 실행(설치여부 확인)
+idle-python3.7
