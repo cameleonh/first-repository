@@ -68,4 +68,8 @@ nvcc -V
 # install Tensorflow (an open source machine learning framework)
 # I choose version 2.1.0 because it is stable and compatible with CUDA 10.1 Toolkit and cuDNN 7.6
 
+# install pip3
+sudo apt-get install python3-pip
+
+# install tensorflow 2.1
 sudo pip3 install --user tensorflow-gpu==2.1.0
