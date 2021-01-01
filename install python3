@@ -1,0 +1,20 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus
+sudo apt-get install libncursesw5-dev libgdbm-dev libc6-dev
+sudo apt-get install zlib1g-dev libsqlite3-dev tk-dev
+sudo apt-get install libssl-dev openssl
+sudo apt-get install libffi-dev
+
+# python3 다운로드
+wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+
+# 압축 해제
+tar xvfz Python-3.7.9.tgz
+
+# 설치
+cd Python-3.7.9
+./configure
+make
+sudo make install
