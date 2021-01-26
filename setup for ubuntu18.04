@@ -21,12 +21,19 @@ sudo apt --purge autoremove nvidia*
 ### to verify your gpu is cuda enable check
 lspci | grep -i nvidia
 
-### Driver Recommend
-apt-cache search nvidia | grep nvidia-driver-418
+### Driver Recommend(설치가능 항목 확인)
+sudo apt-cache search NVIDIA driver metapackage
 ubuntu-drivers devices
+apt-cache search nvidia | grep nvidia-driver-418
 
-### Driver install
-sudo apt-get install nvidia-driver-418
+
+
+### Driver 특정버전 설치
+sudo apt-get install nvidia-driver-418-server
+
+### 드라이버 자동설치
+sudo ubuntu-drivers autoinstall
+
 
 ### gcc compiler is required for development using the cuda toolkit. to verify the version of gcc install enter
 gcc --version
