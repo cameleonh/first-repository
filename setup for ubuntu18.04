@@ -15,9 +15,14 @@ sudo rm /etc/apt/sources.list.d/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
 sudo rm -rf /usr/local/cuda*
 
+## New remove
+sudo apt --purge autoremove nvidia*
 
 ### to verify your gpu is cuda enable check
 lspci | grep -i nvidia
+
+### Driver Recommend
+apt-cache search nvidia | grep nvidia-driver-418
 
 ### gcc compiler is required for development using the cuda toolkit. to verify the version of gcc install enter
 gcc --version
@@ -64,6 +69,7 @@ sudo chmod a+r /usr/local/cuda-10.1/lib64/libcudnn*
 # Finally, to verify the installation, check
 nvidia-smi
 nvcc -V
+nvidia-settings
 
 # install Tensorflow (an open source machine learning framework)
 # I choose version 2.1.0 because it is stable and compatible with CUDA 10.1 Toolkit and cuDNN 7.6
