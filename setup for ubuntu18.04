@@ -25,6 +25,9 @@ lspci | grep -i nvidia
 apt-cache search nvidia | grep nvidia-driver-418
 ubuntu-drivers devices
 
+### Driver install
+sudo apt-get install nvidia-driver-418
+
 ### gcc compiler is required for development using the cuda toolkit. to verify the version of gcc install enter
 gcc --version
 
