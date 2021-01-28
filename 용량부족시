@@ -1,0 +1,7 @@
+sudo apt-get autoremove
+sudo du -sh /var/cache/apt
+sudo apt-get autoclean
+sudo apt-get clean
+
+rm -rf ~/.cache/thumbnails/*
+sudo dpkg --list 'linux-image*'
