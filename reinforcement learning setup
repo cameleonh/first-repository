@@ -1,7 +1,7 @@
+OpenAI universe & gym 설치
 
-
-
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
+1. 환경구성
 
 # golang 최신버전을 위한 repository 등록
 
@@ -60,4 +60,56 @@ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorfl
 # openai anaconda 환경 비활성화
 
 source deactivate tf1x
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. open aigym 설치
+
+[방법1]
+# gym 설치, 전체를 설치하지 않을 때는 [all] 삭제
+pip install gym[all]==0.7.0
+pip install Box2D
+
+
+
+[방법2]
+$ source activate tf1x
+
+(tf1x) $ git clone https://github.com/openai/gym.git
+
+(tf1x) $ cd gym 
+
+(tf1x) $ pip install -e '.[all]'
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. OpenAI universe 설치
+
+# docker 최신 버전설치
+sudo apt-get install apt-transport-https ca-certificates 
+
+sudo apt-key adv \ --keyserver hkp://ha.pool.sks-keyservers.net:80 \ --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
+
+sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual 
+
+sudo apt-get install docker-engine
+
+sudo service docker start
+
+source activate tf1x
+
+(tf1x) $ git clone https://github.com/openai/universe.git
+
+(tf1x) $ cd universe
+
+(tf1x) $ pip install -e .
+
+
+
+
 
