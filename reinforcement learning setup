@@ -71,7 +71,7 @@ source deactivate tf1x
 # gym 설치, 전체를 설치하지 않을 때는 [all] 삭제
 pip install gym[all]==0.7.0
 pip install Box2D
-
+pip install mujoco-py==0.5.7
 
 
 [방법2]
