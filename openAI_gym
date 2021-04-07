@@ -1,3 +1,8 @@
+# 교수님 깃허브
+https://github.com/jaimeps/docker-rl-gym
+
+
+
 # 도커 설치
 sudo docker container run -it -p 8888:8888 -e GRANT_SUDO=yes --user root --name openAI jaimeps/rl-gym
 
