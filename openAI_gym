@@ -1,5 +1,22 @@
-# 도커 실행
+# 도커 설치
 sudo docker container run -it -p 8888:8888 -e GRANT_SUDO=yes --user root --name openAI jaimeps/rl-gym
 
 # 도커 리스트 확인
 sudo docker ps -a
+
+# 도커 실행
+sudo docker start [container name]
+ex: sudo docker start openAI
+
+# 도커 중지
+stop container
+
+# 도커 이미지 보기
+see docker images
+
+# 도커 컨테이너 보기
+docker ps –a
+
+# 도커 컨테이너 삭제
+docker rm [container id]
+you can find [container id] from “docker ps –a”
