@@ -1,0 +1,5 @@
+# 도커 실행
+sudo docker container run -it -p 8888:8888 -e GRANT_SUDO=yes --user root --name openAI jaimeps/rl-gym
+
+# 도커 리스트 확인
+sudo docker ps -a
