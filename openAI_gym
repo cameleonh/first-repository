@@ -3,7 +3,7 @@ https://github.com/jaimeps/docker-rl-gym
 
 
 
-# 도커 
+# 도커설치
 sudo docker container run -it -p 8888:8888 -e GRANT_SUDO=yes --user root --name openAI jaimeps/rl-gym
 
 # 도커 리스트 확인
@@ -13,15 +13,15 @@ sudo docker ps -a
 sudo docker start [container name]
 ex: sudo docker start openAI
 
+# 도커 실행 후 주피터노트북 열기(웹 주소창에 복사)
+http://localhost:8888/
+
 # 도커 중지
-stop container
+sudo stop container
 
 # 도커 이미지 보기
-see docker images
-
-# 도커 컨테이너 보기
-docker ps –a
+sudo see docker images
 
 # 도커 컨테이너 삭제
-docker rm [container id]
+sudo docker rm [container id]
 you can find [container id] from “docker ps –a”
