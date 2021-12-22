@@ -1,0 +1,40 @@
+# 이미지 사이즈 줄이기
+image_w = 224
+image_h = 224
+  
+X = []
+Y = []
+  
+for idex, categorie in enumerate(categories):
+    label = [0 for i in range(num_classes)]
+    label[idex] = 1
+    image_dir = groups_folder_path + categorie + '/'
+  
+    for top, dir, f in os.walk(image_dir):
+        for filename in f:
+            print(image_dir+filename)
+            img = cv2.imread(image_dir+filename)
+            img = cv2.resize(img, None, fx=image_w/img.shape[0], fy=image_h/img.shape[1])
+            X.append(img/256)
+            Y.append(label)
+ 
+X = np.array(X)
+Y = np.array(Y)
+
+
+출처: https://twinw.tistory.com/252 [흰고래의꿈]
+
+
+from tensorflow.keras.applications import VGG16
+from tensorflow.keras.applications import VGG19
+from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications import ResNet152
+from tensorflow.keras.applications import ResNet152V2
+from tensorflow.keras.applications import Xception
+from tensorflow.keras.applications import NASNetLarge 
+
+from tensorflow.keras.applications import imagenet_utils
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
+
+model = VGG16(weights="imagenet")
