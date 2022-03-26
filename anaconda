@@ -1,5 +1,19 @@
 
 
+
+## anaconda 환경에서 cuda10.1 및 cudnn 설치하기
+
+1. 가상환경 활성화
+conda activate [$ENV_NAME]
+
+2. cuda, cudnn 수동 설치
+conda install -c anaconda cudatoolkit=10.1.243
+
+conda install -c anaconda cudnn
+
+3. cuda, cudnn 버전 확인
+conda list
+
 -설치
 
 cd ~/다운로드 && wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh && bash Anaconda3-2020.02-Linux-x86_64.sh  && exit
