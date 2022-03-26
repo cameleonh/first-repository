@@ -14,6 +14,23 @@ conda install -c anaconda cudnn
 3. cuda, cudnn 버전 확인
 conda list
 
+
+4. jupyter notebook 커널연결
+
+## 주피터 노트북 설치
+pip install jupyter notebook
+
+## 커널 연결
+python -m ipykernel install --user --name 가상환경이름 --display-name "표시할 커널이름"
+
+## 커널 연결 해제
+jupyter kernelspec uninstall "커널이름"
+
+
+
+
+
+
 -설치
 
 cd ~/다운로드 && wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh && bash Anaconda3-2020.02-Linux-x86_64.sh  && exit
